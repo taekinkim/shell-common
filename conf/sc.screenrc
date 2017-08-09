@@ -1,0 +1,19 @@
+defscrollback 8192
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+caption always " %n %t %= | F1 new  F2 title  F5 split  F6 only "
+defutf8 on
+vbell off
+bell_msg ""
+
+bindkey -k k1 screen  # F1
+bindkey -k k2 title   # F2
+bindkey -k k5 split   # F5
+bindkey -k k6 only    # F6
+bindkey "^[[A" focus up    # ctrl + up
+bindkey "^[[B" focus down  # ctrl + down
+
+# Mac terminal
+bindkey "\033[5C" prev  # ctrl + <-
+bindkey "\033[5D" next  # ctrl + ->
+
